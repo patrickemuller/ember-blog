@@ -1,16 +1,13 @@
 {{page-title "Post show"}}
 <div>
   <p>
-    {{@model.id}}
-  </p>
-  <p>
     {{@model.slug}}
   </p>
   <p>
     {{@model.title}}
   </p>
-  <p>
-    {{@model.body}}
-  </p>
+  <content>
+    {{markdown-to-html "#Markdown is cool [link](http://emberjs.com)"}}
+  </content>
 </div>
 {{outlet}}

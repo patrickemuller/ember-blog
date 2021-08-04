@@ -2,10 +2,11 @@
 
 {{#each @model as |post|}}
   <div>
-    <p>{{post.id}}</p>
     <p><LinkTo @route='posts.show' @model={{post}}>{{post.slug}}</LinkTo></p>
     <p>{{post.title}}</p>
-    <p>{{post.body}}</p>
+    <content>
+      {{markdown-to-html "#Markdown is cool [link](http://emberjs.com)"}}
+    </content>
   </div>
 {{/each}}
 
