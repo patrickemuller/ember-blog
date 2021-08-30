@@ -24,7 +24,7 @@ module.exports = function (environment) {
   };
 
   if (environment === 'development') {
-    // ENV.APP.LOG_RESOLVER = true;
+    ENV.API_HOST = process.env.API_HOST
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
@@ -45,6 +45,7 @@ module.exports = function (environment) {
 
   if (environment === 'production') {
     // here you can enable a production-specific feature
+    ENV.API_HOST = process.env.API_HOST
   }
 
   return ENV;
