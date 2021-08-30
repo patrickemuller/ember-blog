@@ -5,7 +5,7 @@
     <p><LinkTo @route='posts.show' @model={{post}}>{{post.slug}}</LinkTo></p>
     <p>{{post.title}}</p>
     <content>
-      {{markdown-to-html "#Markdown is cool [link](http://emberjs.com)"}}
+      {{post.stripedBody}}
     </content>
   </div>
 {{/each}}

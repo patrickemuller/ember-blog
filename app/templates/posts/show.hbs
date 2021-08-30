@@ -1,4 +1,5 @@
 {{page-title "Post show"}}
+
 <div>
   <p>
     {{@model.slug}}
@@ -7,7 +8,8 @@
     {{@model.title}}
   </p>
   <content>
-    {{markdown-to-html "#Markdown is cool [link](http://emberjs.com)"}}
+    {{markdown-to-html @model.body}}
   </content>
 </div>
+
 {{outlet}}
